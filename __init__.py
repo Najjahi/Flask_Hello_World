@@ -11,7 +11,7 @@ def hello_world():
 
 @app.route('/exercices/')
 def exercices():
-    return render_template('exercices.html')
+    return render_template('exercices.html')   #IMANE
                                                                                                                
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(debug=True) 
