@@ -20,7 +20,12 @@ def MaPremiereAPI():
 @app.route('/calcul_carre/<int:val_user>')
 def carre(val_user):
   result = val_user * val_user  # Calcul de la somme
-    return "<h2>Le carré de votre valeur est : </h2>" + str(val_user * val_user)   
+    return "<h2>Le carré de votre valeur est : </h2>" + str(val_user * val_user) 
+
+@app.route('/somme/<int:valeur1>/<int:valeur2>')
+def somme(valeur1, valeur2):
+    result = valeur1 + valeur2  # Calcul de la somme
+    return f"La somme de {valeur1} et {valeur2} est {result}"
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True) 
