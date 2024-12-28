@@ -35,6 +35,24 @@ def somme(valeur1, valeur2):
     return (f"Le carré de {valeur1} est {carre_valeur1}, le carré de {valeur2} est {carre_valeur2}, "
             f"et la somme de {valeur1} et {valeur2} est {somme}, qui est {parite}.")
 
+@app.route('/somme', methods=['GET'])
+def somme():
+    # Récupérer les valeurs depuis les paramètres de la requête
+    valeurs = request.args.getlist('valeur')  # Liste des valeurs passées dans l'URL
+    
+    # Convertir les valeurs en entiers
+    try:
+        valeurs = [int(v) for v in valeurs]
+    except ValueError:
+        return "Toutes les valeurs doivent être des entiers", 400
+    
+    # Calculer la somme avec une boucle
+    total = 0
+    for valeur in valeurs:
+        total += valeur
+    
+    return f"La somme des valeurs {valeurs} est {total}"
+
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True) 
