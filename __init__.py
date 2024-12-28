@@ -26,6 +26,15 @@ def carre(val_user):
 def somme(valeur1, valeur2):
     result = valeur1 + valeur2  # Calcul de la somme
     return f"La somme de {valeur1} et {valeur2} est {result}"
+  if somme % 2 == 0:
+        parite = "paire"
+    else:
+        parite = "impaire"
+    
+    # Retourner la réponse formatée
+    return (f"Le carré de {valeur1} est {carre_valeur1}, le carré de {valeur2} est {carre_valeur2}, "
+            f"et la somme de {valeur1} et {valeur2} est {somme}, qui est {parite}.")
+
                                                                                                                
 if __name__ == "__main__":
   app.run(debug=True) 
