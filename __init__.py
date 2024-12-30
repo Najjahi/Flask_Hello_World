@@ -34,7 +34,7 @@ def somme(valeur1, valeur2):
             f"et la somme de {valeur1} et {valeur2} est {somme}, qui est {parite}.")
 
 @app.route('/sommes', methods=['GET'])
-def sommes():
+somme_param():
     # Récupérer les valeurs depuis les paramètres de la requête
     valeurs = request.args.getlist('valeur')  # Liste des valeurs passées dans l'URL
     
