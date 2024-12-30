@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import json
+from flask import request
 import sqlite3
                                                                                                                                        
 app = Flask(__name__)                                                                                                                  
@@ -25,12 +26,9 @@ def carre(val_user):
 @app.route('/somme/<int:valeur1>/<int:valeur2>')
 def somme(valeur1, valeur2):
     result = valeur1 + valeur2  # Calcul de la somme
-    return f"La somme de {valeur1} et {valeur2} est {result}"
-  if somme % 2 == 0:
-        parite = "paire"
-    else:
-        parite = "impaire"
-    
+    parite = "paire" if result % 2 == 0 else "impaire"
+    return f"La somme de {valeur1} et {valeur2} est {result}, qui est {parite}."
+   
     # Retourner la réponse formatée
     return (f"Le carré de {valeur1} est {carre_valeur1}, le carré de {valeur2} est {carre_valeur2}, "
             f"et la somme de {valeur1} et {valeur2} est {somme}, qui est {parite}.")
@@ -47,11 +45,9 @@ def sommes():
         return "Toutes les valeurs doivent être des entiers", 400
     
     # Calculer la somme avec une boucle
-    total = 0
-    for valeur in valeurs:
-        total += valeur
+   total = sum(valeurs)
     
-    return f"La sommes des valeurs {valeurs} est {total}"
+   return f"La somme des valeurs {valeurs} est {total}"
 
                                                                                                                
 if __name__ == "__main__":
