@@ -2,7 +2,7 @@
 PROJET FLASK
 ------------------------------------------------------------------------------------------------------
 Quelles sont les notions qui vont être abordées au cours de cet atelier ?
-Cet atelier a pour objectif de vous apprendre à mettre en service le framework Flask  qui utilise le language Python et permet la construction d'API. Vous allez èdonc utiliser et mettre en oeuvre au travers de cet atelier, un serveur Python utilisant le Framework Flask. 
+Cet atelier a pour objectif de vous apprendre à mettre en service le framework Flask qui utilise le language Python et permet la construction d'API. Vous allez donc utiliser et mettre en oeuvre au travers de cet atelier, un serveur Python utilisant le Framework Flask. 
 Vous allez créer des API, découvrir les Actions et les Secrets GitHUB pour au final créer des applications en Python.
 Large programme mais tout à fait accessible et ne nécessitant pas de base technique particulière. Juste de l'observation et de la rigueur dans votre travail.
 
