@@ -35,12 +35,10 @@ def somme_param():
     if not valeurs:  # Vérifier que des valeurs ont été envoyées
         return "Veuillez saisir des valeurs en utilisant le paramètre 'valeur'. Exemple : ?valeur=1&valeur=2&valeur=3", 400
 
-    # Convertir les valeurs en entiers
     try:
-        valeurs = [int(v) for v in valeurs]
+        valeurs = [int(v) for v in valeurs]    # Convertir les valeurs en entiers
     except ValueError:
-        return "Toutes les valeurs doivent être des entiers", 400
-    
+        return "Toutes les valeurs doivent être des entiers", 400    
 
     total = sum(valeurs)       # Calculer la somme des valeurs
     try:
