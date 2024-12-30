@@ -11,7 +11,7 @@ def hello_world():
 
 @app.route('/exercices/')
 def exercices():
-    return render_template('exercices.html')   #IMAN
+    return render_template('exercices.html')   #IMA
 
 @app.route("/contact/")
 def MaPremiereAPI():
