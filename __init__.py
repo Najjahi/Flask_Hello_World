@@ -51,6 +51,11 @@ def somme_param():
         return f"<h2>La somme des valeurs {valeurs} est {total}, et c'est un nombre pair.</h2>"
     else:
         return f"<h2>La somme des valeurs {valeurs} est {total}, et c'est un nombre impair.</h2>"
+
+@app.route('/cv')
+def cv():
+    return render_template('cv.html')
+
     
 if __name__ == "__main__":
     app.run(debug=True)
