@@ -79,3 +79,28 @@
     <td style="width: 150px; height: 50px;"></td> 
   </tr>
 </table>
+
+<h2> Exercice 3 : Un formulaire avec plein de choses !  </h2>
+  <p> Formulaire </p>
+<form action="/submit" method="post">
+    <label for="pseudo">Votre pseudo :</label><br>
+    <input type="text" id="pseudo" name="pseudo" required><br><br>
+
+    <label for="motdepasse">Votre mot de passe :</label><br>
+    <input type="password" id="motdepasse" name="motdepasse" required><br><br>
+
+    <label for="confirmation_mdp">Ressaisir votre mot de passe :</label><br>
+    <input type="password" id="confirmation_mdp" name="confirmation_mdp" required><br><br>
+
+    <label for="os_prefere">Système d'exploitation préféré :</label><br>
+    <select id="os_prefere" name="os_prefere">
+        <option value="windows">Windows</option>
+        <option value="macos">MacOS</option>
+        <option value="linux">Linux</option>
+        <option value="autre">Autre</option>
+    </select><br><br>
+
+    <input type="submit" value="Envoyer">
+</form>
+
+
