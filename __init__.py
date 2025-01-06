@@ -2,6 +2,9 @@ from flask import Flask, render_template, request
 import sqlite3
 
 app = Flask(__name__)
+def hello_world():
+    return "<h2>Bonjour tout le monde ! </h2> <p> Pour accéder à vos exercices cliquer <a href='./exercices/'Ici</a></p>"
+
 
 @app.route('/')
 def hello_world():
