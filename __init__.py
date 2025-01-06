@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "<h2>Bonjour tout le monde ! </h2> <p> Pour accéder à vos exercices cliquer <a href='./exercices/'Ici</a></p>"
+    return "<h2>Bonjour tout le monde ! </h2> <p> Pour accéder à vos exercices cliquer sur le lien suivant <a href='./exercices/'>Ici</a></p>"
 
 @app.route('/exercices/')
 def exercices():
