@@ -7,11 +7,6 @@ app = Flask(__name__)
 def hello_world():
     return "<h2>Bonjour tout le monde ! </h2> <p> Pour accéder à vos exercices cliquer <a href='./exercices/'Ici</a></p>"
 
-
-
-def hello_world():
-    return render_template('index.html')
-
 @app.route('/exercices/')
 def exercices():
     return render_template('exercices.html')
