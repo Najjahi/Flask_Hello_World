@@ -1,3 +1,16 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+</html>
+
 <h1> TP HTML :Titre de niveau 1 </h1>
 
 <h2>  Exercice 1 : Votre première page HTML :Titre de niveau 2 </h2>
@@ -26,14 +39,14 @@
 
 <table border="2">
   <tr>
-    <td>un tableau</td>
-    <td> </td>
-    <td> </td>
+    <td style="width: 150px; height: 50px;">un tableau</td>
+    <td style="width: 150px; height: 50px;"></td>
+    <td style="width: 150px; height: 50px;"> </td>
   </tr>
   <tr>
-    <td> </td>
-    <td>à 6</td>
-    <td>cases</td>
+    <td style="width: 150px; height: 50px;"></td>
+    <td style="width: 150px; height: 50px;">à 6</td>
+    <td style="width: 150px; height: 50px;">cases</td>
   </tr>
 </table>
 
@@ -62,35 +75,38 @@
     <td style="width: 150px; height: 50px;">un autre tableau</td>  
     <td style="width: 150px; height: 50px;"> </td>
     <td style="width: 150px; height: 50px;"></td>
-    <td style="width: 150px; height: 50px;"></td>
+    <td colspan="2"style="width: 75px; height: 25px;"></td>
+    
   </tr>
   <tr>
-    <td style="width: 150px; height: 50px;"></td> 
-    <td style="width: 150px; height: 50px;"> colspan="2"> </td>
-  
+    <td rowspan="3" style="width: 150px; height: 50px;"></td> 
+    <td style="width: 150px; height: 50px;"> </td>
+    <td rowspan="3" style="width: 150px; height: 50px;"></td>
+    <td colspan="2" style="width: 75px; height: 25px;"> </td>
+     
+  </tr>
+   <tr>
+    <td style="width: 150px; height: 50px;"></td>     
+    <td style="width: 75px; height: 25px;"></td>
+    <td style="width: 75px; height: 25px;"></td>
   </tr>
    <tr>
     <td style="width: 150px; height: 50px;"></td>
-    <td style="width: 150px; height: 50px;"></td>
-    <td style="width: 150px; height: 50px;"></td> 
-    <td></td>
-  </tr>
-   <tr>
-   <td style="width: 150px; height: 50px;"></td>
-    <td style="width: 150px; height: 50px;"></td> 
-    <td style="width: 150px; height: 50px;"></td>
-    <td style="width: 150px; height: 50px;"></td> 
+    <td colspan="2" style="width: 75px; height: 25px;"></td>
+     
+       
   </tr>
 </table>
+
 
 <h2> Exercice 3 : Un formulaire avec plein de choses !  </h2>
   <p> Formulaire </p>
 <form action="/submit" method="post">
     <label for="pseudo">Votre pseudo :</label>
-    <input type="text" id="pseudo" name="pseudo" required><br><br>
+    <input type="text" id="pseudo" name="pseudo" required style="margin-left: 100px;"><br><br>
 
     <label for="motdepasse">Votre mot de passe :</label>
-    <input type="password" id="motdepasse" name="motdepasse" required><br><br>
+    <input type="password" id="motdepasse" name="motdepasse" required style="margin-left: 60px;"><br><br>
 
     <label for="confirmation_mdp">Ressaisir votre mot de passe :</label>
     <input type="password" id="confirmation_mdp" name="confirmation_mdp" required><br><br>
@@ -99,13 +115,13 @@
   
     <input type="radio" id="windowsxp" name="os_prefere" value="windowsxp">
     <label for="windowsxp">Windows XP</label><br>
-    <input type="radio" id="windowsvista" name="os_prefere" value="windowsvista" style="margin-left: 200px;>
+    <input type="radio" id="windowsvista" name="os_prefere" value="windowsvista" style="margin-left: 212px;">
     <label for="windowsvista">Windows Vista</label><br>  
-    <input type="radio" id="macosx" name="os_prefere" value="macosx" style="margin-left: 200px;>
+    <input type="radio" id="macosx" name="os_prefere" value="macosx" style="margin-left: 212px;">
     <label for="macos">MacOS X</label><br>
-    <input type="radio" id="linux" name="os_prefere" value="linux" style="margin-left: 200px;>
+    <input type="radio" id="linux" name="os_prefere" value="linux" style="margin-left: 212px;">
     <label for="linux">Linux</label><br>
-    <input type="radio" id="autre" name="os_prefere" value="autre" style="margin-left: 200px;>
+    <input type="radio" id="autre" name="os_prefere" value="autre" style="margin-left: 212px;">
     <label for="autre">Autre</label><br><br>
 
   <label for="os_prefere"> Vous possédez :</label> 
@@ -113,27 +129,92 @@
     <input type="checkbox" id="ordinateur" name="os_prefere" value="ordinateur">
     <label for="ordinateur"> Un ordinateur de bureau </label><br>
     
-    <input type="checkbox" id="portable" name="os_prefere" value="portable" style="margin-left: 200px;>
+    <input type="checkbox" id="portable" name="os_prefere" value="portable" style="margin-left: 110px;">
     <label for="portable"> Un portable </label><br>
     
-    <input type="checkbox" id="netbook" name="os_prefere" value="netbook" style="margin-left: 200px;>
+    <input type="checkbox" id="netbook" name="os_prefere" value="netbook" style="margin-left: 110px;">
     <label for="netbook"> Un netbook </label><br>
     
-    <input type="checkbox" id="tablette" name="possede" value="tablette" style="margin-left: 200px;>
-    <label for="tablette"> Une tablette (Pad) </label><br>
+    <input type="checkbox" id="tablette" name="possede" value="tablette" style="margin-left: 110px;">
+    <label for="tablette"> Une tablette (Pad) </label><br><br> <br> 
      
     
-  <label for="os_prefere" style="height: 200px;"> Votre profession  :</label> 
+  <label for="os_prefere"> Votre profession  :</label> 
     <select id="os_prefere" name="os_prefere" >
         <option value="chomeur"> Chômeur </option>
         <option value="etudiant"> Etudiant </option>
         <option value="fonctionnaire"> Fonctionnaire </option>
         <option value="prive"> Privé </option>
-        <option value="retraite"> Retraité </option>
+        <option value="retraite"> Retraité </option><br> 
         
-    </select><br><br>
+    </select><br> <br> 
+    
 
-      <button type="submit"> S'inscrire ! </button>
+      <button type="submit" style="background-color: gray; color: white; padding: 10px 20px; margin-left: 150px; border-radius: 5px;"> S'inscrire ! </button>
 </form>
 
+<h2>Exercice 4 : Réalisez un mini site comprenant votre CV selon le descriptif suivant:</h2>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon CV</title>
+</head>
+<body>
+
+  <h1 style="text-align: center;">Mon CV</h1>
+
+  <table border="1" cellpadding="10" cellspacing="0" style="width: 60%; margin: 20px auto;">
+    <!-- Première ligne -->
+    <tr>
+      <td> Imane  <br> NAJJAHI <br> adresse 11 BD DE LA RESISTANCE <br> Nee le 10.07.2000
+
+      </td>
+    </tr>
+       
+    <tr>
+    
+      <td> 
+        <ul> <b>Formation</b></h2><br>
+          <li> 2020-2022 : Diplome developpeuse web</li>
+          <li> 2008-2010 : Master en microfinance</li>
+        </ul>
+      </td>
+      
+    </tr>
+    
+    
+    <tr>
+      <td>
+        <ul> <b>Experiences professionnelles</b>
+          <li> 2022-2024 : Developpeuse Web chez Colombbus</li>
+          <li> 2005-2019 : Chargee de relations chez AWB</li>
+        </ul>
+      </td>
+      </tr>
+    
+    
+    <tr>
+      <td>
+        <ul><b>Competences</b>
+          <li> HTML, CSS, WORDPRESS</li>
+          <li> JavaScript, PHP</li>
+        </ul>
+      </td>
+    </tr>
+    
+    <h2></h2>
+    <tr>
+      <td>
+        <ul> <b>Informations complementaires</b>
+          <li> Travailleusse</li>
+          <li> Serieuse</li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+
+</body>
+</html>
 
