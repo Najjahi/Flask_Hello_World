@@ -96,17 +96,45 @@
     <label for="confirmation_mdp">Ressaisir votre mot de passe :</label>
     <input type="password" id="confirmation_mdp" name="confirmation_mdp" required><br><br>
 
-    <label for="os_prefere">Système d'exploitation préféré :</label><br>
+   <label for="os_prefere">Système d'exploitation préféré :</label><br>
+  
+    <input type="radio" id="windowsxp" name="os_prefere" value="windowsxp">
+    <label for="windowsxp">Windows XP</label><br>
+    <input type="radio" id="windowsvista" name="os_prefere" value="windowsvista">
+    <label for="windowsvista">Windows Vista</label><br>  
+    <input type="radio" id="macosx" name="os_prefere" value="macosx">
+    <label for="macos">MacOS X</label><br>
+    <input type="radio" id="linux" name="os_prefere" value="linux">
+    <label for="linux">Linux</label><br>
+    <input type="radio" id="autre" name="os_prefere" value="autre">
+    <label for="autre">Autre</label><br><br>
+
+  <label for="os_prefere"> Vous possédez :</label><br>
+
+    <input type="checkbox" id="ordinateur" name="os_prefere" value="ordinateur">
+    <label for="ordinateur"> Un ordinateur de bureau </label><br>
+    
+    <input type="checkbox" id="portable" name="os_prefere" value="portable">
+    <label for="portable"> Un portable </label><br>
+    
+    <input type="checkbox" id="netbook" name="os_prefere" value="netbook">
+    <label for="netbook"> Un netbook </label><br>
+    
+    <input type="checkbox" id="tablette" name="possede" value="tablette">
+    <label for="tablette"> Une tablette (Pad) </label><br>
+     
+    
+  <label for="os_prefere"> Votre profession  :</label><br>
     <select id="os_prefere" name="os_prefere">
-        <option value="windows">Windows</option>
-        <option value="macos">MacOS</option>
-        <option value="linux">Linux</option>
-        <option value="autre">Autre</option>
+        <option value="chomeur"> Chômeur </option>
+        <option value="etudiant"> Etudiant </option>
+        <option value="fonctionnaire"> Fonctionnaire </option>
+        <option value="prive"> Privé </option>
+        <option value="retraite"> Retraité </option>
+        
     </select><br><br>
 
-  
-
-    <input type="submit" value="Envoyer">
+      <button type="submit"> S'inscrire ! </button>
 </form>
 
 
