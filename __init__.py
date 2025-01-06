@@ -56,6 +56,10 @@ def somme_param():
 def cv():
     return render_template('cv.html')
 
+@app.route('/page1/')
+def page1():
+    return render_template('page1.html')
+
     
 if __name__ == "__main__":
     app.run(debug=True)
