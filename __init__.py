@@ -52,7 +52,7 @@ def somme_param():
     else:
         return f"<h2>La somme des valeurs {valeurs} est {total}, et c'est un nombre impair.</h2>"
 
-@app.route('/cv')
+@app.route('/cv/')
 def cv():
     return render_template('cv.html')
 
