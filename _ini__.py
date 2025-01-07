@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "<h2>Bonjour tout le monde ! </h2> <p> Pour accéder à vos exercices cliquer sur le lien suivant <a href='./exercices/'>Ici</a></p>"
+    return render_template('index.html')
 
 @app.route('/exercices/')
 def exercices():
@@ -21,9 +21,7 @@ def carre(val_user):
 
 @app.route('/somme/<int:valeur1>/<int:valeur2>')
 def somme(valeur1, valeur2):
-     #return "<h2>La somme de nos deux valeures est : </h2>" + str(val_user + val_user)      
-    result = valeur1 + valeur2  # Calcul de la somme
-
+    return "<h2>La somme de nos deux valeures est : </h2>" + str(val_user + val_user)
     if result % 2 == 0:
         return f"<h2>La somme de {valeur1} et {valeur2} est {result}, et c'est un nombre pair.</h2>"
     else:
@@ -35,10 +33,12 @@ def somme_param():
     if not valeurs:  # Vérifier que des valeurs ont été envoyées
         return "Veuillez saisir des valeurs en utilisant le paramètre 'valeur'. Exemple : ?valeur=1&valeur=2&valeur=3", 400
 
+    # Convertir les valeurs en entiers
     try:
-        valeurs = [int(v) for v in valeurs]    # Convertir les valeurs en entiers
+        valeurs = [int(v) for v in valeurs]
     except ValueError:
-        return "Toutes les valeurs doivent être des entiers", 400    
+        return "Toutes les valeurs doivent être des entiers", 400
+    
 
     total = sum(valeurs)       # Calculer la somme des valeurs
     try:
@@ -51,15 +51,6 @@ def somme_param():
         return f"<h2>La somme des valeurs {valeurs} est {total}, et c'est un nombre pair.</h2>"
     else:
         return f"<h2>La somme des valeurs {valeurs} est {total}, et c'est un nombre impair.</h2>"
-
-@app.route('/cv/')
-def cv():
-    return render_template('cv.html')
-
-@app.route('/page1/')
-def page1():
-    return render_template('page1.html')
-
     
 if __name__ == "__main__":
     app.run(debug=True)
